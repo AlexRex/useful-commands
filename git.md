@@ -49,3 +49,23 @@ github-create() {
   echo " done."
 }
 ```
+
+#### Create pull request from command line
+
+```bash
+pr = "!f() {\
+ remote=`git rmv | grep origin | grep push | awk '{print $2}'`;\
+ project=`echo $remote | awk -F/ '{ print $(NF-1) }'`;\
+ repo=`echo $remote | awk -F/ '{ print $NF }' | cut -d. -f1`;\
+ branch=`git rev-parse --abbrev-ref HEAD`;\
+ browser=chrome;\
+ case $1 in\
+  github | gh) open https://github.com/$project/$repo/compare/$branch...develop?expand=1;;\
+  gitlab | gl) open https://gitlab.com/$project/$repo/merge_requests/new?merge_request[source_branch]=$branch;;\
+  bitbucket | st) open https://tools.adidas-group.com/bitbucket/projects/$project/repos/$repo/compare/commits?sourceBranch=$branch;;\
+  bitbucket | bb) open https://bitbucket.org/$project/$repo/pull-requests/new;;\
+  echo) echo https://host:port/path/$project/$repo?branch=$branch;;\
+  *) open https://tools.adidas-group.com/bitbucket/projects/$project/repos/$repo/compare/commits?sourceBranch=$branch;;\
+ esac;\
+}; f"
+```
