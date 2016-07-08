@@ -62,10 +62,8 @@ pr = "!f() {\
  case $1 in\
   github | gh) open https://github.com/$project/$repo/compare/$branch...develop?expand=1;;\
   gitlab | gl) open https://gitlab.com/$project/$repo/merge_requests/new?merge_request[source_branch]=$branch;;\
-  bitbucket | st) open https://tools.adidas-group.com/bitbucket/projects/$project/repos/$repo/compare/commits?sourceBranch=$branch;;\
   bitbucket | bb) open https://bitbucket.org/$project/$repo/pull-requests/new;;\
   echo) echo https://host:port/path/$project/$repo?branch=$branch;;\
-  *) open https://tools.adidas-group.com/bitbucket/projects/$project/repos/$repo/compare/commits?sourceBranch=$branch;;\
  esac;\
 }; f"
 ```
