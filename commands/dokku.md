@@ -4,4 +4,5 @@
 
 #### Remove an app
 ```bash
-$ dokku apps:destroy <app-name>
+dokku apps:destroy <app-name>
+```
