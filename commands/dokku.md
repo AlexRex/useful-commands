@@ -3,4 +3,5 @@
 ## Server side
 
 #### Remove an app
-`$ dokku apps:destroy <app-name> `
+```bash
+$ dokku apps:destroy <app-name>
