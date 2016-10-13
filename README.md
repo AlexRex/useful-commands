@@ -2,6 +2,6 @@
 
 Useful commandline statements for not everyday use.
 
-* [Git](git.md)
-* [Docker](docker.md)
-* [Dokku](dokku.md)
+* [Git](commands/git.md)
+* [Docker](commands/docker.md)
+* [Dokku](commands/dokku.md)
