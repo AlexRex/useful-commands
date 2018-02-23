@@ -23,14 +23,14 @@ kubectl port-forward <servicename> <port>
 kubectl get ing | grep ing-name | awk 'BEGIN { ORS="" }; { print $1 };'
 ```
 
-###### Bash Script
+- ###### Bash Script
 
-```bash 
-# Get kubectl with grep
-kbctl() {
-  kubectl get $1 | grep $2
-}
-```
+  ```bash 
+  # Get kubectl with grep
+  kbctl() {
+    kubectl get $1 | grep $2
+  }
+  ```
 
 #### Create TLS Secret
 
