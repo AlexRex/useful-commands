@@ -7,5 +7,6 @@ Useful commandline statements for not everyday use.
 * [Dokku](commands/dokku.md)
 * [Git](commands/git.md)
 * [Kubernetes](commands/kubernetes.md)
+* [NPM](commands/npm.md)
 * [OS X](commands/osx.md)
 * [React.JS](commands/react.md)
